@@ -17,6 +17,7 @@ async function fetchNovelContent(url) {
     }
 
     let modContent = cleanText(content.innerHTML);
+    modContent = modContent.replace(/^\n+/gm, '')
     modContent = "#." + modContent
     return modContent
 }
