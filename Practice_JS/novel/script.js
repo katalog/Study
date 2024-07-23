@@ -15,8 +15,9 @@ async function fetchNovelContent(url) {
         console.error(`Failed to find '#novel_content' on the page: ${url}`);
         return null;
     }
-    const modContent = cleanText(content.innerHTML);
-    modContent[0] = "#." + modContent[0]
+
+    let modContent = cleanText(content.innerHTML);
+    modContent = "#." + modContent
     return modContent
 }
 
